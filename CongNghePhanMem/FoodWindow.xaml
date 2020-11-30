@@ -10,43 +10,103 @@
         x:Name="window"
         Title="Món ăn" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition Height="auto"></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <!--các element binding từ selected item-->
-        <materialDesign:Card Grid.Row="0" Margin="5">
-            <WrapPanel Margin="0 0 0 10">
-                <TextBox Text="{Binding FoodType, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Loại thực đơn" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Tên món" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox Text="{Binding Price, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Giá" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <TextBox Text="{Binding Status, UpdateSourceTrigger=PropertyChanged}" Margin="5 5 15 5" materialDesign:HintAssist.Hint="Trạng thái" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-            </WrapPanel>
-        </materialDesign:Card>
+        <DockPanel Grid.Row="0" >
+            <TextBox x:Name="txt" Height="60" VerticalAlignment="Top"/>
+        </DockPanel>
+        <DockPanel Grid.Row="1" Grid.Column="0" Background="White" >
+            <StackPanel Margin="10">
+                <TextBox Name="tbId" Visibility="Collapsed" Text="{Binding SelectedItem.id, ElementName=ListViewProducts}" />
+                <Label Content="_Name:" FontSize="17" FontFamily="Franklin Gothic Medium" />
+                <TextBox Name="tbName"  Text="{Binding SelectedItem.name, ElementName=ListViewProducts}" />
+                <Label Content="Price:" FontSize="17" FontFamily="Franklin Gothic Medium"/>
+                <TextBox Name="tbPrice" Text="{Binding SelectedItem.price, ElementName=ListViewProducts}" />
+                <Label Content="image" FontSize="17" FontFamily="Franklin Gothic Medium"/>
+                <Image x:Name="imgDynamic" Width="150" Height="90" Source="{Binding SelectedItem.image, ElementName=ListViewProducts}" />
+                <TextBlock Name="pathImage"/>
+                <DockPanel Margin="10">
+                    <WrapPanel HorizontalAlignment="Center" DockPanel.Dock="Top" Margin="0,0,0,10" >
+                        <Button Name="btnOpenFile" Background="CornflowerBlue"   Click="btnOpenFile_Click">Image</Button>
+                    </WrapPanel>
+                </DockPanel>
+            </StackPanel>
 
-        <materialDesign:Card Grid.Row="1" Margin="5">
-            <WrapPanel>
-                <Button Command="{Binding AddCommand}" Content="Thêm" Margin="5" Width="100"></Button>
-                <Button Command="{Binding EditCommand}" Content="Sửa" Margin="5" Width="100"></Button>
-                <Button Command="{Binding DeleteCommand}" Content="Xóa" Margin="5" Width="100"></Button>
-            </WrapPanel>
-        </materialDesign:Card>
+        </DockPanel>
+        <Grid Grid.Row="2" Grid.Column="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button
+                Grid.Column="0"
+                    x:Name="btn"
+                    Click="getAll">
 
-        <materialDesign:Card Grid.Row="2" Margin="5" VerticalAlignment="Stretch">
-            <ScrollViewer VerticalScrollBarVisibility="Auto">
-                <ListView ItemsSource="{Binding List}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"></GridViewColumn>
-                            <GridViewColumn Header="Loại thực đơn" DisplayMemberBinding="{Binding FoodType}"></GridViewColumn>
-                            <GridViewColumn Header="Tên món" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
-                            <GridViewColumn Header="Giá" DisplayMemberBinding="{Binding Price}"></GridViewColumn>
-                            <GridViewColumn Header="Trạng thái" DisplayMemberBinding="{Binding Status}"></GridViewColumn>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </ScrollViewer>
-        </materialDesign:Card>
+                Get
+            </Button>
+            <Button
+                Grid.Column="1"
+                    x:Name="btnPost"
+                    Click="btnPostClick" >
+                Post
+            </Button>
+            <Button
+                Grid.Column="2"
+                    x:Name="btnDel"
+                    Click="btnDelClick" >
+                Delete
+            </Button>
+            <Button
+                Grid.Column="3"
+                    x:Name="btnEdit"
+                    Click="btnEditClick">
+                Edit
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1"  Grid.Column="1">
+
+            <Grid Grid.Column="1" Grid.Row="1" Background="#FFF1F1F1">
+                <StackPanel>
+                    <StackPanel Margin="20 0">
+                        <ListBox x:Name="ListViewProducts" ItemsSource="{Binding Product}"   Height="580" >
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Margin="10" Width="105" Height="160">
+                                        <StackPanel x:Name="bdName">
+                                            <Border Width="100" Height="100" CornerRadius="5" Margin="5">
+                                                <Border.Effect>
+                                                    <DropShadowEffect ShadowDepth="1"/>
+                                                </Border.Effect>
+                                                <Border.Background>
+                                                    <ImageBrush ImageSource="{Binding image}"/>
+                                                </Border.Background>
+                                            </Border>
+                                            <TextBlock x:Name="tblName"  Margin="5 0" Text="{Binding name}" FontSize="15"/>
+                                            <TextBlock Margin="5" Text= "{Binding price, StringFormat={}{0:C}}" FontSize="17" FontFamily="Franklin Gothic Medium"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ListBox>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
