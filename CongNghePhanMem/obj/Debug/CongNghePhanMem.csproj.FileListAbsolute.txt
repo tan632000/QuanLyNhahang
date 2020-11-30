@@ -34,9 +34,5 @@ G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\StaffWindow.g.cs
 G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\BillWindow.baml
 G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\FoodWindow.baml
 G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\StaffWindow.baml
-G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\BookingWindow.g.cs
 G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\FoodTypeWindow.g.cs
-G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\TableWindow.g.cs
-G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\BookingWindow.baml
 G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\FoodTypeWindow.baml
-G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\TableWindow.baml

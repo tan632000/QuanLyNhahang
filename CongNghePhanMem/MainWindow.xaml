@@ -36,7 +36,6 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button Command="{Binding StaffCommand}" Grid.Column="0" ToolTip="Quản lí nhân viên">
                     <Grid>
@@ -88,34 +87,6 @@
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0">
                             <TextBlock Text="Quản lí loại thực đơn" HorizontalAlignment="Center"></TextBlock>
-                        </Grid>
-                        <Grid Grid.Row="1">
-                            <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="Dns" />
-                        </Grid>
-                    </Grid>
-                </Button>
-                <Button Command="{Binding TableCommand}" Grid.Column="4" ToolTip="Quản lí bàn">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
-                            <TextBlock Text="Quản lí bàn" HorizontalAlignment="Center"></TextBlock>
-                        </Grid>
-                        <Grid Grid.Row="1">
-                            <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="Dns" />
-                        </Grid>
-                    </Grid>
-                </Button>
-                <Button Command="{Binding BookingCommand}" Grid.Column="5" ToolTip="Quản lí đặt bàn">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition></RowDefinition>
-                            <RowDefinition></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
-                            <TextBlock Text="Quản lí đặt bàn" HorizontalAlignment="Center"></TextBlock>
                         </Grid>
                         <Grid Grid.Row="1">
                             <materialDesign:PackIcon Width="24" Height="24"  HorizontalAlignment="Center"  Kind="Dns" />

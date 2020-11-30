@@ -72,9 +72,6 @@
     <Compile Include="BillWindow.xaml.cs">
       <DependentUpon>BillWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BookingWindow.xaml.cs">
-      <DependentUpon>BookingWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FoodTypeWindow.xaml.cs">
       <DependentUpon>FoodTypeWindow.xaml</DependentUpon>
     </Compile>
@@ -87,16 +84,9 @@
     <Compile Include="StaffWindow.xaml.cs">
       <DependentUpon>StaffWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TableWindow.xaml.cs">
-      <DependentUpon>TableWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Page Include="BillWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="BookingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,10 +119,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StaffWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TableWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

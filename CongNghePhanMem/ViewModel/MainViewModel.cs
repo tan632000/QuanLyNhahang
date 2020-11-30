@@ -16,8 +16,6 @@ namespace CongNghePhanMem.ViewModel
         public ICommand FoodCommand { get; set; }
         public ICommand BillCommand { get; set; }
         public ICommand FoodTypeCommand { get; set; }
-        public ICommand BookingCommand { get; set; }
-        public ICommand TableCommand { get; set; }
 
         // mọi thứ xử lý sẽ nằm trong này
         public MainViewModel()
@@ -32,8 +30,6 @@ namespace CongNghePhanMem.ViewModel
             FoodCommand = new RelayCommand<object>((p) => { return true; }, (p) => { FoodWindow wd = new FoodWindow(); wd.ShowDialog(); });
             BillCommand = new RelayCommand<object>((p) => { return true; }, (p) => { BillWindow wd = new BillWindow(); wd.ShowDialog(); });
             FoodTypeCommand = new RelayCommand<object>((p) => { return true; }, (p) => { FoodTypeWindow wd = new FoodTypeWindow(); wd.ShowDialog(); });
-            BookingCommand = new RelayCommand<object>((p) => { return true; }, (p) => { BookingWindow wd = new BookingWindow(); wd.ShowDialog(); });
-            TableCommand = new RelayCommand<object>((p) => { return true; }, (p) => { TableWindow wd = new TableWindow(); wd.ShowDialog(); });
         }
     }
 }
