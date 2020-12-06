@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\obj\Debug\
+C:\Users\R480\Documents\laptrinh\QuanLyNhahang\CongNghePhanMem\obj\Debug\
 CongNghePhanMem
 none
 false
 DEBUG;TRACE
-G:\Laptrinh\WPF\CongNghePhanMem\CongNghePhanMem\App.xaml
-91743358884
+C:\Users\R480\Documents\laptrinh\QuanLyNhahang\CongNghePhanMem\App.xaml
+7389323806
 
-15332976830
-17-828814276
-BillWindow.xaml;BookingWindow.xaml;FoodTypeWindow.xaml;FoodWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;StaffWindow.xaml;TableWindow.xaml;
+13-1594840851
+1735520908
+BillWindow.xaml;FoodTypeWindow.xaml;FoodWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ResourceXAML\MainResource.xaml;StaffWindow.xaml;
 
-True
+False
 
