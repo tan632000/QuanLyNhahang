@@ -10,6 +10,156 @@
         x:Name="window"
         Title="Hóa đơn" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Text="Nhà Hàng Buffet Lẩu Bung" FontSize="30" FontFamily="Gigi" ></TextBlock>
+            <TextBlock Margin="10 5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text="34 Triều Khúc-Tân Triều-Thanh Trì-Hà Nội "></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBlock  FontWeight="Bold" FontSize="40"  VerticalAlignment="Top" HorizontalAlignment="Center">Phiếu Thanh Toán</TextBlock>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">Thời gian vào:</TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">20h00'</TextBox>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">Thời gian ra:</TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">22h00'</TextBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">Bàn:</TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">B3-T1</TextBox>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">SL Khách:</TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">3</TextBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">Ngày:</TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">03/12/2020</TextBox>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">NV lập hóa đơn:</TextBlock>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">Messi</TextBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <ListView Name="listViewItem" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="STT"></GridViewColumn>
+                        <GridViewColumn Header="Tên Món"></GridViewColumn>
+                        <GridViewColumn Header="Số Lượng"></GridViewColumn>
+                        <GridViewColumn Header="Giá"></GridViewColumn>
+                        <GridViewColumn Header="Thành Tiền"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" FontSize="20" FontWeight="ExtraBlack" HorizontalAlignment="Center" VerticalAlignment="Center"> Tổng Hóa Đơn:</TextBlock>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">20000 VNĐ</TextBlock>
+        </Grid>
+        <Grid Grid.Row="5">
+            <TextBlock FontWeight="SemiBold" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center">Chân Thành Cảm Ơn Quý Khách, Xin Hẹn Gặp Lại !</TextBlock>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Height="30" Width="100" Grid.Column="0"  HorizontalAlignment="Right" FontSize="10" VerticalAlignment="Center">In Hóa Đơn </Button>
+            <Button Height="30" Width="100" Grid.Column="1" Margin="5 1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">Thanh Toán</Button>
+            <Button Height="30" Width="100" Grid.Column="2" Margin="5 1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">Hủy</Button>
+
+        </Grid>
+
+
     </Grid>
 </Window>
