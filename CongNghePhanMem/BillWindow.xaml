@@ -156,7 +156,7 @@
             </Grid.ColumnDefinitions>
             <Button Height="30" Width="100" Grid.Column="0"  HorizontalAlignment="Right" FontSize="10" VerticalAlignment="Center">In Hóa Đơn </Button>
             <Button Height="30" Width="100" Grid.Column="1" Margin="5 1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10">Thanh Toán</Button>
-            <Button Height="30" Width="100" Grid.Column="2" Margin="5 1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">Hủy</Button>
+            <!--<Button Height="30" Width="100" Grid.Column="2" Margin="5 1" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="10">Hủy</Button>-->
 
         </Grid>
 
